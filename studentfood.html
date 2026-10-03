@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studentfood.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top custom-navbar">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-munch-img.png"
+            class="food-munch-logo"
+            alt="Food Munch">
+        </a>
+
+        <!-- Mobile Search -->
+        <div class="mobile-navbar-search">
+            <input
+                type="text"
+                id="mobileFoodSearch"
+                placeholder="🔍 Search"
+                autocomplete="off"
+            >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler custom-toggler" type="button"
+            onclick="openMenu()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Desktop Navbar -->
+        <div class="collapse navbar-collapse" id="desktopNavbar">
+            <div class="navbar-nav ">
+
+                <!-- Food Search -->
+                <div class="food-search-box">
+                    <input type="text" id="foodSearch" placeholder="Search food..." autocomplete="off">
+                    <button type="button" id="clearFoodSearch">×</button>
+                </div>
+                <a class="nav-link" href="#wcuSection">Why Choose Us?</a>
+                <a class="nav-link" href="#exploreMenuSection">Explore Menu</a>
+                <a class="nav-link" href="#deliveryPaymentSection">Delivery & Payment</a>
+                <a class="nav-link" href="#followUsSection">Follow Us</a>
+            
+
+                   <a class="nav-link cart-link"
+                    href="/my-orders.html"
+                    id="myordersLink">
+                        📦 My Orders
+                    </a>
+
+                    <span id="userWelcome" class="user-welcome"></span>
+
+                    <a id="loginLink" class="nav-login" href="login.html">
+                        Login
+                    </a>
+
+                    <a id="signupLink" class="nav-signup" href="signup.html">
+                        Sign Up
+                    </a>
+
+                    <a id="logoutLink" class="nav-logout" href="#" onclick="logoutUser()">
+                        Logout
+                    </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="no-food-found">
+    <div class="no-food-icon">🔍</div>
+    <h3>No Food Found</h3>
+    <p>Try searching for another dish.</p>
+</div>
+
+<!-- Mobile Side Menu -->
+<div id="mobileMenu" class="mobile-menu">
+
+    <div class="mobile-menu-header">
+        <span>Food Munch</span>
+
+        <button onclick="closeMenu()" class="close-menu">
+            &times;
+        </button>
+    </div>
+
+
+    <div class="mobile-menu-content">
+
+        <a href="#wcuSection" onclick="closeMenu()">
+            Why Choose Us?
+        </a>
+
+        <a href="#exploreMenuSection" onclick="closeMenu()">
+            Explore Menu
+        </a>
+
+        <a href="#deliveryPaymentSection" onclick="closeMenu()">
+            Delivery & Payment
+        </a>
+
+        <a href="#followUsSection" onclick="closeMenu()">
+            Follow Us
+        </a>
+
+        <a href="/my-orders.html"
+        onclick="closeMenu();"
+        class="mobile-cart">
+            📦 My Orders
+        </a>
+
+        <!-- Mobile User -->
+        <span id="mobileUserWelcome" class="mobile-user-welcome"></span>
+
+        <a href="login.html" id="mobileLoginLink" class="mobile-login">
+            Login
+        </a>
+
+        <a href="signup.html" id="mobileSignupLink" class="mobile-signup">
+            Create Account
+        </a>
+
+        <a href="#" id="mobileLogoutLink"
+        class="mobile-logout"
+        onclick="logoutUser(); return false;">
+            Logout
+        </a>
+
+    </div>
+</div>
+
+
+<!-- Background Overlay -->
+
+<div id="menuOverlay" class="menu-overlay" onclick="closeSideMenu()"></div>
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center">
+            <h1 class="banner-heading mb-3">Get Delicious Food Anytime</h1>
+            <p class="banner-caption mb-4">Eat Smart & Healthy</p>
+            <a href="#exploreMenuSection" class="custom-button"> View Menu </a>
+           
+        </div>
+    </div>
+    <div class="wcu-section pt-5 pb-5" id="wcuSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="wcu-section-heading">Why Choose Us?</h1>
+                    <p class="wcu-section-description">
+                        We serve delicious, fresh and quality food with fast delivery right to your doorstep.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-serve.png" class="wcu-card-image" />
+                        <h1 class="wcu-card-title mt-3">Food Service</h1>
+                        <p class="wcu-card-description">
+                            Enjoy delicious meals prepared with care and delivered fresh and safely to your doorstep.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/fruits-img.png" class="wcu-card-image" />
+                        <h1 class="wcu-card-title mt-3">Fresh Food</h1>
+                        <p class="wcu-card-description">
+                            We prepare our food using fresh and quality ingredients to give you a tasty and healthy dining experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/offers-img.png" class="wcu-card-image" />
+                        <h1 class="wcu-card-title mt-3">Best Offers</h1>
+                        <p class="wcu-card-description">
+                            Get exciting offers and special discounts on delicious food orders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="menu-section-heading">Our Special Menu</h1>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow menu-item-card p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Chicken Starters</h1>
+                        <p class="menu-item-price">₹199</p>
+                        <a href="#chickenItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow menu-item-card p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Vegetarian Starters</h1>
+                        <p class="menu-item-price">₹149</p>
+                        <a href="#vegItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Special Soups</h1>
+                        <p class="menu-item-price">₹99</p>
+                        <a href="#soupItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Fish & Seafood</h1>
+                        <p class="menu-item-price">₹249</p>
+                        <a href="#fishItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Biryani & Main Course</h1>
+                        <p class="menu-item-price">₹199</p>
+                        <a href="#mainCourseItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Noodles & Pasta</h1>
+                        <p class="menu-item-price">₹159</p>
+                        <a href="#noodlesItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Fresh Salads</h1>
+                        <p class="menu-item-price">₹129</p>
+                        <a href="#saladItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Desserts & Sweets</h1>
+                        <p class="menu-item-price">₹119</p>
+                        <a href="#dessertItems" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="chickenItems" style="display: none;">
+        <h2>Chicken Starters</h2>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCLCMBqpPbGixWKafeh4aLsKpnUUGImPgc4YpeLwtTog&s=10"
+                alt="Chicken 65"
+                class="chicken-item-image">
+
+            <h3>Chicken 65</h3>
+            <p>₹199</p>
+            <button id="chicken65OrderBtn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AvQCEEYjN3KJcFQHLZ1m2EtMc5kJ6x4GCfmij-1-0A&s=10"
+                alt="Chicken Wings"
+                class="chicken-item-image">
+
+            <h3>Chicken Wings</h3>
+            <p>₹249</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUtV42NKa6W_091LJRf9pE6e2WYFr1_ugVPLOnNQmSQ&s=10"
+                alt="Chicken Lollipop"
+                class="chicken-item-image">
+
+            <h3>Chicken Lollipop</h3>
+            <p>₹229</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="vegItems" style="display: none;">
+        <h2>Vegetarian Starters</h2>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_SJHC8WYj30-35KOMzAm-KFduZM-F6YzD6Iv1l2EksSdbusbwMz6jYM6V&s=10"
+                alt="Vegetable Starter"
+                class="chicken-item-image">
+
+            <h3>Veg Manchurian</h3>
+            <p>₹149</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSwc5GWcVnDJnFHZV2GnopeMV0F_lykhh1ic5xGnir8g&s=10"
+                alt="Vegetable Salad"
+                class="chicken-item-image">
+
+            <h3>Veg Spring Roll</h3>
+            <p>₹129</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="soupItems" style="display: none;">
+        <h2>Special Soups</h2>
+
+        <div>
+            <img src="https://www.gimmesomeoven.com/wp-content/uploads/2021/09/Roasted-Tomato-Soup-Recipe-8.jpg"
+                alt="Tomato Soup"
+                class="chicken-item-image">
+
+            <h3>Tomato Soup</h3>
+            <p>₹99</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvC-BN2S0LJTC0fH4gbqDkXkx7L8C56Th_0PBCi7TYZ2InHpZ9F70fQT78&s=10"
+                alt="Vegetable Soup"
+                class="chicken-item-image">
+
+            <h3>Vegetable Soup</h3>
+            <p>₹119</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://diethood.com/wp-content/uploads/2023/12/chicken-vegetable-soup-recipe-3.jpg"
+                alt="Chicken Soup"
+                class="chicken-item-image">
+
+            <h3>Chicken Soup</h3>
+            <p>₹149</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+
+    <div id="fishItems" style="display: none;">
+        <h2>Fish & Seafood</h2>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlS6aK0JzknUSoP_oyJc1d3UCoqXD_SMzjh72q5tBdXg&s=10"
+                alt="Fish Fry"
+                class="chicken-item-image">
+
+            <h3>Fish Fry</h3>
+            <p>₹249</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqcFj0-mzz3JJx4Kozk8PRPjxWHEw_tIn9fWfNDYrtgb8LcUo6Evzux9A&s=10"
+                alt="Fish Curry"
+                class="chicken-item-image">
+
+            <h3>Fish Curry</h3>
+            <p>₹299</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ06TsqHFJjlxVqh47J-10RoVNAJ2CYolr4vAAcOPUnztaX71WRIBn_zY&s=10"
+                alt="Prawn Fry"
+                class="chicken-item-image">
+
+            <h3>Prawn Fry</h3>
+            <p>₹349</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+
+    <div id="mainCourseItems" style="display: none;">
+        <h2>Main Course</h2>
+
+        <div>
+            <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
+                alt="Chicken Biryani"
+                class="chicken-item-image">
+
+            <h3>Chicken Biryani</h3>
+            <p>₹249</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRabpV0x1Q0EfRDu2Hb0a7QBUWHvZpewq9aVMxmtSs03A&s=10"
+                alt="Chicken Rice"
+                class="chicken-item-image">
+
+            <h3>Chicken Rice</h3>
+            <p>₹199</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReFQqlO7ECmiPeDDAq-3H2c8DGDvgx3kBW4kRySOfurSElh8LEO9lJKts&s=10"
+                alt="Veg Biryani"
+                class="chicken-item-image">
+
+            <h3>Veg Biryani</h3>
+            <p>₹179</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="noodlesItems" style="display: none;">
+        <h2>Noodles & Pasta</h2>
+
+        <div>
+            <img src="https://therecipecritic.com/wp-content/uploads/2025/09/kung-pao-noodles-1.jpg"
+                alt="Chicken Noodles"
+                class="chicken-item-image">
+
+            <h3>Chicken Noodles</h3>
+            <p>₹199</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://bitesofindiaevan.com/wp-content/uploads/2024/11/veg-schezwan-hakka-noodles.png"
+                alt="Veg Noodles"
+                class="chicken-item-image">
+
+            <h3>Veg Noodles</h3>
+            <p>₹149</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgD3T-yaIWZn_wzUGqHIPgn_tGRKC4auwkz0ncpYSTcHs2JXPjp4_EYRU&s=10"
+                alt="Pasta"
+                class="chicken-item-image">
+
+            <h3>Creamy Pasta</h3>
+            <p>₹229</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="saladItems" style="display: none;">
+        <h2>Fresh Salads</h2>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmV5eypoZIqrp2k8TvropU9vDNmNQapkP9fxtXxjk_7Q&s=10"
+                alt="Fresh Vegetable Salad"
+                class="chicken-item-image">
+
+            <h3>Fresh Vegetable Salad</h3>
+            <p>₹129</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkm7L0baBe9nsS7bSARiLmarGwJ2LBiVwtOeeonghzWw&s=10"
+                alt="Healthy Green Salad"
+                class="chicken-item-image">
+
+            <h3>Healthy Green Salad</h3>
+            <p>₹149</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQY3vwGYBZy1DUuL-okZxbfrdfqrLfD-Bwxyd-GP6nTg&s=10"
+                alt="Fruit Salad"
+                class="chicken-item-image">
+
+            <h3>Fresh Fruit Salad</h3>
+            <p>₹159</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="dessertItems" style="display: none;">
+        <h2>Delicious Desserts</h2>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSKhfubDHkiEh4MNo1ucQbdojM9ZrlQobBG4olXAAibg&s=10"
+                alt="Chocolate Cake"
+                class="chicken-item-image">
+
+            <h3>Chocolate Cake</h3>
+            <p>₹149</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ8C3bKdJK1McYhAOlQC98uLvsrv5e1Sb6GYb0WXxr3ijL_8WjC0WEZBQ&s=10"
+                alt="Donut"
+                class="chicken-item-image">
+
+            <h3>Chocolate Donut</h3>
+            <p>₹99</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YWVObH_nvdqGOyrktsTRoAt5JpxS7V3Vcex2VhfnLD-XA_ZChC9lxJglQsDacJAAVXV9QY260qtSgtGOl2HMuPyfhR5uMk1zdvhoo94&s=10"
+                alt="Ice Cream"
+                class="chicken-item-image">
+
+            <h3>Ice Cream</h3>
+            <p>₹89</p>
+            <button class="food-order-btn">Order Now</button>
+        </div>
+    </div>
+
+    <div id="cartSection" class="cart-section" style="display: none;">
+        <div class="container">
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems"></div>
+
+            <h3 id="cartTotal">Total: ₹0</h3>
+
+            <button id="placeOrderBtn" class="custom-button">
+                Place Order
+            </button>
+        </div>
+    </div>
+
+    <!-- ===============================
+     MY ORDERS SECTION
+================================ -->
+
+
+    <div id="orderFormSection" style="display: none;">
+
+        <h2>Place Your Order</h2>
+
+        <!-- Order Price Details -->
+        <div class="order-price-details">
+
+            <h3>🧾 Order Summary</h3>
+
+            <div id="orderSummaryItems"></div>
+
+            <div class="price-row">
+                <span>Subtotal</span>
+                <span id="orderSubtotal">₹0</span>
+            </div>
+
+            <div class="price-row">
+                <span>Delivery Charge</span>
+                <span id="deliveryCharge">₹40</span>
+            </div>
+
+            <div class="price-row total-row">
+                <span>Grand Total</span>
+                <span id="orderGrandTotal">₹40</span>
+            </div>
+
+        </div>
+
+        <input type="text" id="customerName" placeholder="Enter your name">
+
+        <input type="tel" id="customerPhone" placeholder="Enter phone number">
+
+        <textarea id="customerAddress"
+            placeholder="Enter delivery address"></textarea>
+
+        <button id="confirmOrderBtn" class="custom-button">
+            Confirm Order
+        </button>
+
+    </div>
+
+    <!-- ================= PAYMENT SECTION ================= -->
+
+<div id="paymentSection" class="payment-section" style="display: none;">
+
+    <div class="payment-header">
+        <button class="payment-back-btn" onclick="backToOrderForm()">←</button>
+        <h2>Payments</h2>
+        <span class="secure-badge">🔒 100% Secure</span>
+    </div>
+
+    <div class="payment-container">
+
+        <!-- Total Amount -->
+        <div class="payment-total-box">
+            <div>
+                <span class="total-label">Total Amount</span>
+                <span class="total-subtitle">Including delivery charges</span>
+            </div>
+
+            <strong id="paymentTotal">₹0</strong>
+        </div>
+
+        <!-- Cashback -->
+        <div class="cashback-box">
+            <h3>🎁 5% Cashback</h3>
+            <p>Claim now with available payment offers</p>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="payment-options">
+
+            <!-- UPI -->
+            <div class="payment-option">
+                <div class="payment-option-left">
+                    <div class="payment-icon">📱</div>
+                    <div>
+                        <h3>UPI</h3>
+                        <p>Pay by any UPI app</p>
+                        <span>Get upto ₹100 cashback • 3 offers available</span>
+                    </div>
+                </div>
+
+                <input type="radio"
+                       name="paymentMethod"
+                       value="UPI">
+            </div>
+
+            <!-- Card -->
+            <div class="payment-option">
+                <div class="payment-option-left">
+                    <div class="payment-icon">💳</div>
+                    <div>
+                        <h3>Credit / Debit / ATM Card</h3>
+                        <p>Add and secure cards as per RBI guidelines</p>
+                        <span>Get upto 5% cashback • 2 offers available</span>
+                    </div>
+                </div>
+
+                <input type="radio"
+                       name="paymentMethod"
+                       value="Card">
+            </div>
+
+            <!-- COD -->
+            <div class="payment-option">
+                <div class="payment-option-left">
+                    <div class="payment-icon">💵</div>
+                    <div>
+                        <h3>Cash on Delivery</h3>
+                        <p>Pay when your order is delivered</p>
+                    </div>
+                </div>
+
+                <input type="radio"
+                       name="paymentMethod"
+                       value="COD">
+            </div>
+
+        </div>
+
+        <!-- Pay Button -->
+        <button id="payNowBtn" class="pay-now-btn">
+            Pay Now
+        </button>
+
+    </div>
+</div>
+
+    <!-- Order Success Popup -->
+    <div id="successPopup" class="success-popup-overlay">
+
+        <div class="success-popup">
+
+            <button class="success-close" onclick="closeSuccessPopup()">
+                &times;
+            </button>
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2>Order Placed Successfully!</h2>
+
+            <p id="successMessage">
+                Thank you for your order!
+            </p>
+
+            <div class="success-line"></div>
+
+            <p class="success-subtext">
+                Your order has been confirmed successfully.
+            </p>
+
+            <button class="success-button" onclick="closeSuccessPopup()">
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="healthy-food-section pt-5 pb-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-5">
+                    <div class="text-center">
+                        <img
+                            src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png"
+                            class="healthy-food-section-img"
+                        />
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <h1 class="healthy-food-section-heading">
+                        Fresh, Healthy & Delicious Food
+                    </h1>
+
+                    <p class="healthy-food-section-description">
+                        Enjoy fresh, healthy and delicious food prepared with
+                        quality ingredients. We bring nutritious meals and fresh
+                        fruits directly to your table for a happy and healthy
+                        lifestyle.
+                    </p>
+
+                    <button class="custom-button">
+                        Explore Healthy Food
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="delivery-and-payment-section pt-5 pb-5" id="deliveryPaymentSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 order-1 order-md-2">
+                    <div class="text-center">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png" class="delivery-and-payment-section-img" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 order-2 order-md-1">
+                    <h1 class="delivery-and-payment-section-heading">
+                        Fast Delivery & Easy Payment
+                    </h1>
+                   <p class="delivery-and-payment-section-description">
+                        Enjoy fast and reliable food delivery right to your doorstep.
+                        Choose from multiple secure payment options and track your order
+                        in real time. Order your favourite food easily and enjoy a
+                        delicious meal without any hassle.
+                    </p>
+                    <button class="custom-button">Order Now</button>
+                    <div class="mt-3">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thanking-customers-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                   <h1 class="thanking-customers-section-heading">
+                        Thank You for Being Our Valued Customer! ❤️
+                    </h1>
+                    <p class="thanking-customers-section-description">
+                        We have a special surprise gift waiting just for you!
+                    </p>
+                    <div class="d-md-none">
+                        <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                    <div>
+                        <button class="custom-button redeem-gift-button">Redeem Your Gift 🎁</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 d-none d-md-block">
+                    <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="follow-us-section-heading">Follow Us</h1>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+
+                        <div class="follow-us-icon-container">
+                            <i class="fa-brands fa-twitter icon"></i>
+                        </div>
+
+                        <div class="follow-us-icon-container">
+                            <a href="https://www.instagram.com/kutty_kalai_29?igsi=MWNpOTN5aW1uYXhl" target="_blank">
+                                <i class="fab fa-instagram icon"></i>
+                            </a>
+                        </div>
+
+                        <div class="follow-us-icon-container">
+                            <a href="https://www.facebook.com/share/1LAQq84Q7w/" target="_blank">
+                                <i class="fab fa-facebook icon"></i>
+                            </a>
+                        </div>
+
+                        <div class="follow-us-icon-container">
+                            <a href="https://wa.me/917094825584" target="_blank">
+                                <i class="fab fa-whatsapp icon"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="food-munch-logo  text-center" />
+                    <h1 class="footer-section-mail-id">orderfood@foodmunch.com</h1>
+                    <p class="footer-section-address">
+                        123 Ayur Vigyan Nagar, New Delhi, India.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+    <script>
+
+function openMenu() {
+
+    document.getElementById("mobileMenu")
+        .classList.add("active");
+
+    document.getElementById("menuOverlay")
+        .classList.add("active");
+}
+
+
+function closeMenu() {
+
+    document.getElementById("mobileMenu")
+        .classList.remove("active");
+
+    document.getElementById("menuOverlay")
+        .classList.remove("active");
+}
+
+
+/* Cart count sync */
+
+function updateMobileCartCount() {
+
+    let desktopCount =
+        document.getElementById("cartCount");
+
+    let mobileCount =
+        document.getElementById("mobileCartCount");
+
+    if (desktopCount && mobileCount) {
+
+        mobileCount.innerText =
+            desktopCount.innerText;
+    }
+}
+
+setInterval(updateMobileCartCount, 300);
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userName = localStorage.getItem("userName");
+
+    /* Desktop */
+    const userWelcome =
+        document.getElementById("userWelcome");
+
+    const loginLink =
+        document.getElementById("loginLink");
+
+    const signupLink =
+        document.getElementById("signupLink");
+
+    const logoutLink =
+        document.getElementById("logoutLink");
+
+
+    /* Mobile */
+    const mobileUserWelcome =
+        document.getElementById("mobileUserWelcome");
+
+    const mobileLoginLink =
+        document.getElementById("mobileLoginLink");
+
+    const mobileSignupLink =
+        document.getElementById("mobileSignupLink");
+
+    const mobileLogoutLink =
+        document.getElementById("mobileLogoutLink");
+
+
+    if (userName) {
+
+        /* =========================
+           DESKTOP LOGGED IN
+           ========================= */
+
+        if (userWelcome) {
+            userWelcome.textContent =
+                "👋 Hi, " + userName;
+
+            userWelcome.style.display =
+                "inline-block";
+        }
+
+        if (loginLink) {
+            loginLink.style.display = "none";
+        }
+
+        if (signupLink) {
+            signupLink.style.display = "none";
+        }
+
+        if (logoutLink) {
+            logoutLink.style.display =
+                "inline-block";
+        }
+
+
+        /* =========================
+           MOBILE LOGGED IN
+           ========================= */
+
+        if (mobileUserWelcome) {
+            mobileUserWelcome.textContent =
+                "👋 Hi, " + userName;
+
+            mobileUserWelcome.style.display =
+                "block";
+        }
+
+        if (mobileLoginLink) {
+            mobileLoginLink.style.display =
+                "none";
+        }
+
+        if (mobileSignupLink) {
+            mobileSignupLink.style.display =
+                "none";
+        }
+
+        if (mobileLogoutLink) {
+            mobileLogoutLink.style.display =
+                "block";
+        }
+
+
+    } else {
+
+        /* =========================
+           DESKTOP LOGGED OUT
+           ========================= */
+
+        if (userWelcome) {
+            userWelcome.style.display = "none";
+        }
+
+        if (logoutLink) {
+            logoutLink.style.display = "none";
+        }
+
+
+        /* =========================
+           MOBILE LOGGED OUT
+           ========================= */
+
+        if (mobileUserWelcome) {
+            mobileUserWelcome.style.display =
+                "none";
+        }
+
+        if (mobileLogoutLink) {
+            mobileLogoutLink.style.display =
+                "none";
+        }
+
+    }
+
+});
+
+
+function logoutUser() {
+
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userId");
+
+    window.location.href = "/login.html";
+}
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInputs = [
+        document.getElementById("foodSearch"),
+        document.getElementById("mobileFoodSearch")
+    ].filter(Boolean);
+
+    const clearButton = document.getElementById("clearFoodSearch");
+
+    if (searchInputs.length === 0) return;
+
+    const foodSections = [
+        "chickenItems",
+        "vegItems",
+        "soupItems",
+        "fishItems",
+        "mainCourseItems",
+        "noodlesItems",
+        "saladItems",
+        "dessertItems"
+    ];
+
+    function performSearch(searchText) {
+
+        searchText = searchText.trim().toLowerCase();
+
+        let foundAnyFood = false;
+        let firstResult = null;
+
+        foodSections.forEach(function (id) {
+
+            const section = document.getElementById(id);
+
+            if (!section) return;
+
+            let foundInSection = false;
+
+            Array.from(section.children).forEach(function (card) {
+
+                if (card.tagName !== "DIV") return;
+
+                const foodName = card.querySelector("h3");
+
+                if (!foodName) return;
+
+                const name = foodName.textContent
+                    .trim()
+                    .toLowerCase();
+
+                if (searchText !== "" && name.includes(searchText)) {
+
+                    card.style.display = "inline-block";
+
+                    foundInSection = true;
+                    foundAnyFood = true;
+
+                    if (!firstResult) {
+                        firstResult = card;
+                    }
+
+                } else if (searchText !== "") {
+
+                    card.style.display = "none";
+
+                } else {
+
+                    card.style.display = "inline-block";
+
+                }
+
+            });
+
+            if (searchText === "") {
+                section.style.display = "none";
+            } else if (foundInSection) {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+
+        });
+
+        /* No Food Found message */
+        let noFoodFound = document.getElementById("noFoodFound");
+
+        if (!noFoodFound) {
+
+            noFoodFound = document.createElement("div");
+
+            noFoodFound.id = "noFoodFound";
+
+            noFoodFound.innerHTML = `
+                <div style="font-size:42px;">🔍</div>
+                <h3>No Food Found</h3>
+                <p>Try searching for another dish.</p>
+            `;
+
+            noFoodFound.style.textAlign = "center";
+            noFoodFound.style.padding = "40px 20px";
+            noFoodFound.style.margin = "30px auto";
+            noFoodFound.style.maxWidth = "450px";
+            noFoodFound.style.background = "#fffdf5";
+            noFoodFound.style.border = "1px solid #ead37a";
+            noFoodFound.style.borderRadius = "15px";
+            noFoodFound.style.boxShadow =
+                "0 5px 15px rgba(0,0,0,0.08)";
+
+            const exploreSection =
+                document.getElementById("exploreMenuSection");
+
+            if (exploreSection) {
+                exploreSection.appendChild(noFoodFound);
+            }
+
+        }
+
+        if (searchText === "" || foundAnyFood) {
+            noFoodFound.style.display = "none";
+        } else {
+            noFoodFound.style.display = "block";
+        }
+
+        /* Scroll to first result */
+        if (firstResult) {
+
+            setTimeout(function () {
+
+                firstResult.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }, 100);
+
+        }
+    }
+
+
+    /* Desktop + Mobile Search */
+    searchInputs.forEach(function (input) {
+
+        input.addEventListener("input", function () {
+
+            const searchText = input.value;
+
+            /* Keep both search boxes synchronized */
+            searchInputs.forEach(function (otherInput) {
+
+                if (otherInput !== input) {
+                    otherInput.value = searchText;
+                }
+
+            });
+
+            if (clearButton) {
+                clearButton.style.display =
+                    searchText.trim() ? "block" : "none";
+            }
+
+            performSearch(searchText);
+
+        });
+
+    });
+
+
+    /* Clear Search */
+    if (clearButton) {
+
+        clearButton.addEventListener("click", function () {
+
+            searchInputs.forEach(function (input) {
+                input.value = "";
+            });
+
+            clearButton.style.display = "none";
+
+            performSearch("");
+
+            searchInputs[0].focus();
+
+        });
+
+    }
+
+});
+</script>
+
+<script>
+
+async function loadMyOrders() {
+
+    const userId = localStorage.getItem("userId");
+
+    /* User login check */
+    if (!userId) {
+
+        alert("Please login to view your orders.");
+
+        window.location.href = "/login.html";
+
+        return;
+    }
+
+    /* Get sections */
+    const myOrderSection =
+        document.getElementById("myOrderSection");
+
+    const myOrderItems =
+        document.getElementById("myOrderItems");
+
+    const cartSection =
+        document.getElementById("cartSection");
+
+    const orderFormSection =
+        document.getElementById("orderFormSection");
+
+    const paymentSection =
+        document.getElementById("paymentSection");
+
+
+    /* Hide other sections */
+    if (cartSection) {
+        cartSection.style.display = "none";
+    }
+
+    if (orderFormSection) {
+        orderFormSection.style.display = "none";
+    }
+
+    if (paymentSection) {
+        paymentSection.style.display = "none";
+    }
+
+
+    /* Show My Orders section */
+    if (myOrderSection) {
+        myOrderSection.style.display = "block";
+    }
+
+
+    /* Loading message */
+    myOrderItems.innerHTML = `
+        <div style="text-align:center; padding:40px;">
+            <h3>Loading your orders...</h3>
+            <p>Please wait...</p>
+        </div>
+    `;
+
+
+    try {
+
+        const response = await fetch(
+            `/my-orders/${userId}`
+        );
+
+
+        const result = await response.json();
+
+
+        console.log("My Orders Response:", result);
+
+
+        if (!result.success) {
+
+            myOrderItems.innerHTML = `
+                <div style="text-align:center; padding:40px;">
+                    <h3>Unable to load orders</h3>
+                    <p>${result.message || "Something went wrong."}</p>
+                </div>
+            `;
+
+            return;
+        }
+
+
+        const orders = result.orders;
+
+
+        /* No orders */
+        if (!orders || orders.length === 0) {
+
+            myOrderItems.innerHTML = `
+                <div style="text-align:center; padding:50px 20px;">
+                    <div style="font-size:60px;">📦</div>
+
+                    <h3>No Orders Yet</h3>
+
+                    <p>
+                        You haven't placed any food orders yet.
+                    </p>
+                </div>
+            `;
+
+            return;
+        }
+
+
+        /* Clear old orders */
+        myOrderItems.innerHTML = "";
+
+
+        /* Display all orders */
+        orders.forEach(function(order) {
+
+            const orderCard =
+                document.createElement("div");
+
+            orderCard.className = "my-order-card";
+
+
+            orderCard.innerHTML = `
+
+                <div class="my-order-card-header">
+
+                    <div>
+                        <h3>${order.food_name}</h3>
+
+                        <span>
+                            Order #${order.id}
+                        </span>
+                    </div>
+
+                    <span class="order-status">
+                        Confirmed
+                    </span>
+
+                </div>
+
+
+                <div class="my-order-details">
+
+                    <div class="order-detail-row">
+                        <span>🍽️ Food</span>
+                        <strong>${order.food_name}</strong>
+                    </div>
+
+                    <div class="order-detail-row">
+                        <span>💰 Price</span>
+                        <strong>₹${order.price}</strong>
+                    </div>
+
+                    <div class="order-detail-row">
+                        <span>🔢 Quantity</span>
+                        <strong>${order.quantity}</strong>
+                    </div>
+
+                    <div class="order-detail-row">
+                        <span>💵 Total</span>
+                        <strong>₹${order.total_amount}</strong>
+                    </div>
+
+                    <div class="order-detail-row">
+                        <span>💳 Payment</span>
+                        <strong>${order.payment_method}</strong>
+                    </div>
+
+                    <div class="order-detail-row">
+                        <span>📅 Ordered At</span>
+                        <strong>${order.ordered_at}</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-order-details">
+
+                    <h4>Delivery Details</h4>
+
+                    <p>
+                        <strong>Name:</strong>
+                        ${order.customer_name}
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        ${order.customer_phone}
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong>
+                        ${order.customer_address}
+                    </p>
+
+                </div>
+
+            `;
+
+
+            myOrderItems.appendChild(orderCard);
+
+        });
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "Load My Orders Error:",
+            error
+        );
+
+
+        myOrderItems.innerHTML = `
+            <div style="text-align:center; padding:40px;">
+
+                <div style="font-size:50px;">
+                    ⚠️
+                </div>
+
+                <h3>Unable to load orders</h3>
+
+                <p>
+                    Please check your connection
+                    and try again.
+                </p>
+
+            </div>
+        `;
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | FoodMunch</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="studentfood.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <!-- Logo / Icon -->
+            <div class="login-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+
+            <h1>Welcome Back!</h1>
+
+            <div class="login">
+                <span>Food</span>Munch
+            </div>
+
+            <p class="login-subtitle">
+                Login to continue ordering your favourite food
+            </p>
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Email Address"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required>
+
+                    <i class="fa-solid fa-eye password-toggle"
+                        id="togglePassword"></i>
+                </div>
+
+                <!-- Remember + Forgot -->
+                <div class="login-options">
+
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" class="forgot-password">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button">
+                    <span>Login</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <!-- Divider -->
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Signup -->
+            <p class="signup-text">
+                Don't have an account?
+                <a href="signup.html">Create Account</a>
+            </p>
+
+            <!-- Back -->
+            <a href="studentfood.html" class="back-home">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+<script>
+
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("loginPassword");
+
+    togglePassword.addEventListener("click", function () {
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+
+    });
+
+
+    function showMessage(type, title, text) {
+
+        const message = document.getElementById("loginMessage");
+        const icon = document.getElementById("messageIcon");
+
+        document.getElementById("messageTitle").textContent = title;
+        document.getElementById("messageText").textContent = text;
+
+        message.className = "login-message " + type;
+
+        if (type === "success") {
+            icon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        } else {
+            icon.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>';
+        }
+
+        message.classList.add("show");
+
+    }
+
+
+    function closeMessage() {
+
+        document.getElementById("loginMessage")
+            .classList.remove("show");
+
+    }
+
+
+    document.getElementById("loginForm").addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("loginEmail").value.trim();
+
+        const password =
+            document.getElementById("loginPassword").value;
+
+
+        if (!email || !password) {
+
+            showMessage(
+                "error",
+                "Missing Information",
+                "Please enter your email and password."
+            );
+
+            return;
+        }
+
+
+        try {
+
+            const response = await fetch(" /login", {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                }
+            );
+
+
+            const result = await response.json();
+
+            console.log("LOGIN RESPONSE:", result);
+
+
+            if (result.success) {
+
+                localStorage.setItem(
+                    "userId",
+                    result.id
+                );
+
+                localStorage.setItem(
+                    "userName",
+                    result.name
+                );
+
+
+                showMessage(
+                    "success",
+                    "Welcome Back!",
+                    "You have successfully logged in to FoodMunch."
+                );
+
+
+                setTimeout(function() {
+
+                    window.location.href = "/";
+
+                }, 2000);
+
+
+            } else {
+
+                showMessage(
+                    "error",
+                    "Login Failed",
+                    "The email or password you entered is incorrect."
+                );
+
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "LOGIN ERROR:",
+                error
+            );
+
+
+            showMessage(
+                "error",
+                "Connection Error",
+                error.message
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+<div id="loginMessage" class="login-message">
+    <div class="message-icon" id="messageIcon"></div>
+
+    <div class="message-content">
+        <h3 id="messageTitle"></h3>
+        <p id="messageText"></p>
+    </div>
+
+    <button type="button" onclick="closeMessage()">×</button>
+</div>
+
+</body>
+
+</html>

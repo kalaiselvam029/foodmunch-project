@@ -1,0 +1,3096 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem3 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem4 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+.banner-section-bg-container {
+    background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.custom-button {
+    color: white;
+    background-color: #d0b200;
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.custom-outline-button {
+    color: #d0b200;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+}
+
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+
+.offers {
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.explore-menu-section {
+    background-color: white;
+}
+
+.menu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.menu-item-image {
+    border-radius: 16px;
+}
+
+.menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+}
+
+.healthy-food-section {
+    background-color: #f9fbfe;
+}
+
+.healthy-food-section-img {
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.healthy-food-section-img:hover {
+    transform: scale(1.05);
+}
+
+.healthy-food-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.healthy-food-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.healthy-food-section .custom-button {
+    width: 190px;
+    height: 50px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.healthy-food-button:hover {
+    background-color: #b89b00;
+}
+
+.delivery-and-payment-section {
+    background-color: #ffffff;
+}
+
+.delivery-and-payment-section-img {
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.delivery-and-payment-section-img:hover {
+    transform: scale(1.05);
+}
+
+.delivery-and-payment-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.delivery-and-payment-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.payment-card-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-right: 18px;
+    transition: transform 0.3s ease;
+}
+
+.thanking-customers-section {
+    background-color: #fff8e1;
+    border-radius: 20px;
+}
+
+.thanking-customers-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.thanking-customers-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.thanking-customers-section-img {
+    width: 280px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.thanking-customers-section-img:hover {
+    transform: scale(1.05);
+}
+.redeem-gift-button {
+    width: 200px !important;
+    min-width: 200px !important;
+    height: 50px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+
+
+/* ===== Professional Navbar ===== */
+
+.navbar {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.food-munch-logo {
+    width: 70px;
+    height: auto;
+}
+
+.navbar-nav {
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #323f4b !important;
+    padding: 15px 14px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d0b200 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #d0b200 !important;
+    font-weight: 700;
+}
+
+/* Mobile Navbar */
+
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 5px !important;
+    }
+
+    .food-munch-logo {
+        width: 60px;
+    }
+}
+
+/* ===== Modern Hero Section ===== */
+
+.banner-section-bg-container {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay for better text visibility */
+.banner-section-bg-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Keep content above overlay */
+.banner-section-bg-container .text-center {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Heading */
+.banner-heading {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero Subtitle */
+.banner-caption {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* View Menu Button */
+.custom-button {
+    min-width: 140px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Order Now Button */
+.custom-outline-button {
+    min-width: 140px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.custom-button:hover,
+.custom-outline-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+
+    .banner-section-bg-container {
+        min-height: 90vh;
+    }
+
+    .banner-heading {
+        font-size: 34px;
+    }
+
+    .banner-caption {
+        font-size: 19px;
+    }
+
+    .custom-button,
+    .custom-outline-button {
+        min-width: 120px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+.custom-button,
+.custom-outline-button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.custom-button,
+.custom-outline-button,
+.custom-button:hover,
+.custom-outline-button:hover {
+    text-decoration: none !important;
+}
+
+/* ===== Why Choose Us Section ===== */
+
+.wcu-section {
+    background-color: #f9fbfd;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+/* WCU Cards */
+
+.wcu-card {
+    background-color: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 18px;
+    min-height: 100%;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+}
+
+/* Card Hover */
+
+.wcu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* Card Image */
+
+.wcu-card-image {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-top: 10px;
+    transition: transform 0.35s ease;
+}
+
+/* Image Hover */
+
+.wcu-card:hover .wcu-card-image {
+    transform: scale(1.1);
+}
+
+/* Card Title */
+
+.wcu-card-title {
+    color: #183b56;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Card Description */
+
+.wcu-card-description {
+    color: #5a7184;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Offer Text */
+
+.offers {
+    color: #d0b200;
+    font-weight: 700;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+    .wcu-section-heading {
+        font-size: 30px;
+    }
+
+    .wcu-section-description {
+        font-size: 16px;
+    }
+
+    .wcu-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ===== Explore Menu Section ===== */
+
+.explore-menu-section {
+    background-color: #ffffff;
+}
+
+.menu-section-heading {
+    color: #183b56;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Menu Cards */
+
+.menu-item-card {
+    background-color: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+/* Card Hover */
+
+.menu-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Food Image */
+
+.menu-item-image {
+    border-radius: 12px;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Image Zoom */
+
+.menu-item-card:hover .menu-item-image {
+    transform: scale(1.05);
+}
+
+/* Food Name */
+
+.menu-card-title {
+    color: #183b56;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+/* View All */
+
+.menu-item-link {
+    color: #d0b200;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item-link:hover {
+    color: #a68b00;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+    .menu-section-heading {
+        font-size: 30px;
+    }
+
+    .menu-item-image {
+        height: 200px;
+    }
+
+    .menu-card-title {
+        font-size: 19px;
+    }
+}
+
+.menu-item-card {
+    transition: all 0.3s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.menu-item-image {
+    transition: transform 0.3s ease;
+}
+
+.menu-item-card:hover .menu-item-image {
+    transform: scale(1.05);
+}
+
+.menu-item-price {
+    color: #d0b200;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Chicken Items Section */
+#chickenItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#chickenItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#chickenItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#chickenItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#chickenItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#chickenItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#chickenItems button:hover {
+    background-color: #b89600;
+}
+
+.chicken-item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Vegetarian Items Section */
+
+#vegItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#vegItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#vegItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#vegItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#vegItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#vegItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#vegItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Soup Items Section ===== */
+
+#soupItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#soupItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#soupItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#soupItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#soupItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#soupItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#soupItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Fish & Seafood Section ===== */
+
+#fishItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#fishItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#fishItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#fishItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#fishItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#fishItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px;
+
+}
+
+/* ===== Biryani & Main Course Section ===== */
+
+#mainCourseItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#mainCourseItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#mainCourseItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#mainCourseItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#mainCourseItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#mainCourseItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#mainCourseItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Noodles & Pasta Section ===== */
+
+#noodlesItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#noodlesItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#noodlesItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#noodlesItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#noodlesItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#noodlesItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#noodlesItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Fresh Salads Section ===== */
+
+#saladItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#saladItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#saladItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#saladItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#saladItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#saladItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#saladItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Desserts & Sweets Section ===== */
+
+#dessertItems {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#dessertItems h2 {
+    color: #264653;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#dessertItems > div {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+#dessertItems h3 {
+    color: #264653;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#dessertItems p {
+    color: #d4af00;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#dessertItems button {
+    background-color: #d4af00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#dessertItems button:hover {
+    background-color: #b89600;
+}
+
+/* ===== Cart Section ===== */
+
+.cart-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cart-section h2 {
+    color: #183b56;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#cartItems {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+#cartTotal {
+    color: #d0af00;
+    margin: 20px 0;
+}
+
+/* ===== Place Order Section ===== */
+
+#orderFormSection {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+#orderFormSection h2 {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+#orderFormSection input,
+#orderFormSection textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#orderFormSection input:focus,
+#orderFormSection textarea:focus {
+    border-color: #d0b200;
+}
+
+#orderFormSection textarea {
+    height: 100px;
+    resize: none;
+}
+
+#confirmOrderBtn {
+    width: 180px;
+    margin-top: 5px;
+}
+
+/* ===== Professional Order Success Popup ===== */
+
+.success-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.success-popup {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 40px 30px 35px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: popupScale 0.35s ease;
+}
+
+@keyframes popupScale {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Success Icon */
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e8f8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon i {
+    font-size: 38px;
+    color: #22a06b;
+}
+
+/* Popup Heading */
+
+.success-popup h2 {
+    color: #183b56;
+    font-family: "Roboto", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Customer Message */
+
+#successMessage {
+    color: #323f4b;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/* Divider */
+
+.success-line {
+    width: 60px;
+    height: 3px;
+    background-color: #d0b200;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+}
+
+/* Sub Text */
+
+.success-subtext {
+    color: #7b8794;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Continue Button */
+
+.success-button {
+    width: 190px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d0b200;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.success-button:hover {
+    background-color: #b89b00;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Close Button */
+
+.success-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    color: #7b8794;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+.success-close:hover {
+    color: #183b56;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+
+    .success-popup {
+        padding: 35px 20px 30px;
+    }
+
+    .success-popup h2 {
+        font-size: 23px;
+    }
+
+    .success-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .success-icon i {
+        font-size: 32px;
+    }
+}
+
+/* ===== Professional Cart Items ===== */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.cart-item-details {
+    flex: 1;
+    text-align: left;
+}
+
+.cart-item-details h3 {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.cart-item-details p {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 14px;
+    margin: 0;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background-color: #d0b200;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #b89b00;
+    transform: scale(1.08);
+}
+
+.quantity {
+    min-width: 25px;
+    text-align: center;
+    color: #183b56;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cart-item-total {
+    min-width: 70px;
+    text-align: right;
+    color: #d0b200;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Cart Total */
+
+#cartTotal {
+    color: #183b56;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+/* Mobile Cart */
+
+@media screen and (max-width: 600px) {
+
+    .cart-item {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .quantity-controls {
+        margin-top: 5px;
+    }
+
+    .cart-item-total {
+        margin-left: auto;
+    }
+}
+/* =========================================
+   PROFESSIONAL LOGIN PAGE
+   ========================================= */
+
+.login-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 248, 225, 0.95),
+            rgba(255, 255, 255, 0.98)
+        );
+
+    box-sizing: border-box;
+}
+
+
+.login {
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    
+}
+
+.login span {
+    color: #ffc107;
+}
+
+/* Login Card */
+.login-box {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 42px 38px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid #f0e0d2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    animation: loginCard 0.6s ease;
+}
+
+
+@keyframes loginCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Food Icon */
+
+.login-icon {
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #d0b200,
+        #f4d03f
+    );
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    box-shadow:
+        0 10px 25px rgba(208, 178, 0, 0.30);
+}
+
+
+.login-box h1 {
+    color: #183b56;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin: 0 0 8px;
+}
+
+
+.login-subtitle {
+    color: #7b8794;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* Input Box */
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+.input-box > i:first-child {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9aa5b1;
+
+    font-size: 16px;
+
+    pointer-events: none;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 48px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9e2ec;
+
+    border-radius: 12px;
+
+    background-color: #f9fbfd;
+
+    color: #183b56;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+
+.input-box input::placeholder {
+    color: #9aa5b1;
+}
+
+
+.input-box input:focus {
+    border-color: #d0b200;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(208, 178, 0, 0.10);
+}
+
+
+/* Password Eye */
+
+.password-toggle {
+    position: absolute;
+
+    right: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9aa5b1;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: color 0.3s ease;
+}
+
+
+.password-toggle:hover {
+    color: #d0b200;
+}
+
+
+/* Login Options */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 4px 0 22px;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 13px;
+}
+
+
+.remember-me {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5a7184;
+
+    cursor: pointer;
+}
+
+
+.remember-me input {
+    accent-color: #d0b200;
+
+    cursor: pointer;
+}
+
+
+.forgot-password {
+    color: #d0b200;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+
+.forgot-password:hover {
+    color: #a68b00;
+
+    text-decoration: none;
+}
+
+
+/* Login Button */
+
+.login-button {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #d0b200,
+        #e4c52e
+    );
+
+    color: #ffffff;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 8px 20px rgba(208, 178, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(208, 178, 0, 0.35);
+}
+
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+
+.login-button i {
+    transition: transform 0.3s ease;
+}
+
+
+.login-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* Divider */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 28px 0;
+
+    color: #9aa5b1;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #e5eaf0;
+}
+
+
+.divider span {
+    padding: 0 5px;
+}
+
+
+/* Signup */
+
+.signup-text {
+    color: #7b8794;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.signup-text a {
+    color: #d0b200;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.signup-text a:hover {
+    color: #a68b00;
+
+    text-decoration: none;
+}
+
+
+/* Back Home */
+
+.back-home {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5a7184;
+
+    font-family: "Roboto", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+
+.back-home:hover {
+    color: #d0b200;
+
+    text-decoration: none;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================
+   LOGIN MOBILE RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .login-container {
+        padding: 20px 15px;
+    }
+
+
+    .login-box {
+        padding: 35px 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .login-icon {
+        width: 68px;
+        height: 68px;
+
+        font-size: 27px;
+    }
+
+
+    .login-box h1 {
+        font-size: 26px;
+    }
+
+
+    .login-subtitle {
+        font-size: 13px;
+    }
+
+
+    .login-options {
+        font-size: 12px;
+    }
+
+
+    .input-box input {
+        height: 50px;
+
+        font-size: 14px;
+    }
+
+
+    .login-button {
+        height: 50px;
+
+        font-size: 15px;
+    }
+
+}
+
+/* ===============================
+   PROFESSIONAL NAVBAR
+================================ */
+
+.custom-navbar {
+    height: 65px !important;
+    min-height: 65px !important;
+    padding: 5px 15px !important;
+    background-color: white !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+}
+
+.food-munch-logo {
+    width: 65px;
+}
+
+/* Desktop Links */
+
+.custom-navbar .nav-link {
+    color: #333 !important;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 18px;
+    transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #d4af00 !important;
+}
+
+
+/* Cart */
+
+.cart-link {
+    position: relative;
+}
+
+#cartCount {
+    background: #d4af00;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+
+/* Login */
+
+.nav-login {
+    text-decoration: none !important;
+    color: #d4af00 !important;
+    border: 1px solid #d4af00;
+    padding: 8px 18px;
+    border-radius: 6px;
+    margin: 7px 5px 7px 18px;
+    font-weight: 600;
+}
+
+.nav-login:hover {
+    background: #d4af00;
+    color: white !important;
+}
+
+
+/* Create Account */
+
+.nav-signup {
+    text-decoration: none !important;
+    color: white !important;
+    background: #d4af00;
+    padding: 9px 16px;
+    border-radius: 6px;
+    margin: 7px 0 7px 5px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.nav-signup:hover {
+    background: #bd9d00;
+}
+
+
+/* ===============================
+   MOBILE SIDE MENU
+================================ */
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -310px;
+
+    width: 285px;
+
+    /* IMPORTANT: extra white space வராமல் */
+    height: auto;
+    max-height: 100vh;
+
+    background: white;
+
+    z-index: 2000;
+
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.20);
+
+    transition: right 0.35s ease;
+
+    overflow-y: auto;
+}
+
+
+/* Menu Open */
+
+.mobile-menu.active {
+    right: 0;
+}
+
+
+/* Header */
+
+.mobile-menu-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #d4af00;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* Close Button */
+
+.close-menu {
+    background: none;
+    border: none;
+
+    font-size: 28px;
+    color: #333;
+
+    cursor: pointer;
+}
+
+
+/* Menu Content */
+
+.mobile-menu-content {
+    padding: 10px 12px 15px;
+}
+
+
+/* Links */
+
+.mobile-menu-content a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 13px 12px;
+
+    border-radius: 6px;
+
+    transition: 0.25s;
+}
+
+.mobile-menu-content a:hover {
+    background: #fff9d6;
+    color: #c4a400;
+}
+
+
+/* Cart */
+
+.mobile-cart {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobileCartCount {
+    background: #d4af00;
+
+    color: white;
+
+    min-width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+
+/* Login */
+
+.mobile-login {
+    text-align: center;
+
+    border: 1px solid #d4af00;
+
+    color: #c4a400 !important;
+
+    margin: 6px 0;
+
+    padding: 10px !important;
+}
+
+
+/* Create Account */
+
+.mobile-signup {
+    text-align: center;
+
+    background: #d4af00;
+
+    color: white !important;
+
+    margin-top: 5px;
+
+    padding: 10px !important;
+}
+
+
+/* ===============================
+   DARK OVERLAY
+================================ */
+
+.menu-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.food-munch-logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+.custom-navbar {
+    height: 65px !important;
+    min-height: 65px !important;
+    padding: 5px 15px !important;
+    background-color: white !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12) !important;
+    z-index: 1000 !important;
+}
+
+.custom-navbar .food-munch-logo {
+    width: 65px !important;
+    height: auto !important;
+}
+
+.custom-navbar {
+    height: 85px !important;
+    min-height: 85px !important;
+    padding: 8px 15px !important;
+}
+
+.custom-navbar .navbar-brand {
+    padding: 0 !important;
+}
+
+.custom-navbar .food-munch-logo {
+    width: 85px !important;
+    height: auto !important;
+}
+
+.custom-navbar .navbar-toggler {
+    padding: 7px 11px !important;
+}
+
+/* ===============================
+   ORDER PRICE DETAILS
+================================ */
+
+.order-price-details {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.order-price-details h3 {
+    margin-bottom: 18px;
+    color: #333;
+    font-size: 22px;
+}
+
+.order-summary-row,
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 16px;
+}
+
+.total-row {
+    border-bottom: none;
+    margin-top: 8px;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#orderGrandTotal {
+    color: #d0b200;
+}
+
+/* =====================================
+   PROFESSIONAL PAYMENT SECTION
+===================================== */
+
+.payment-section {
+    background: #f7f8fc;
+    padding: 35px 15px 60px;
+    min-height: 100vh;
+}
+
+.payment-header {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.payment-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+    flex: 1;
+}
+
+.payment-back-btn {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: #222;
+}
+
+.secure-badge {
+    background: #f1f3f5;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.payment-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Total */
+
+.payment-total-box {
+    background: #eef3ff;
+    padding: 25px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-label {
+    display: block;
+    font-size: 22px;
+    color: #2455b8;
+    font-weight: 600;
+}
+
+.total-subtitle {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 14px;
+}
+
+.payment-total-box strong {
+    font-size: 30px;
+    color: #2455b8;
+}
+
+/* Cashback */
+
+.cashback-box {
+    background: #e6f8ec;
+    padding: 22px 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.cashback-box h3 {
+    margin: 0 0 7px;
+    color: #18864b;
+    font-size: 23px;
+}
+
+.cashback-box p {
+    margin: 0;
+    color: #287c49;
+    font-size: 16px;
+}
+
+/* Payment Options */
+
+.payment-options {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.payment-option {
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment-option:last-child {
+    border-bottom: none;
+}
+
+.payment-option:hover {
+    background: #fafafa;
+}
+
+.payment-option-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.payment-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.payment-option h3 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    color: #222;
+}
+
+.payment-option p {
+    margin: 0 0 6px;
+    color: #777;
+    font-size: 15px;
+}
+
+.payment-option span {
+    color: #159447;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.payment-option input {
+    width: 20px;
+    height: 20px;
+    accent-color: #d4b000;
+    cursor: pointer;
+}
+
+/* Pay Now */
+
+.pay-now-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d4b000, #f1ce24);
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(212, 176, 0, 0.3);
+    transition: 0.3s;
+}
+
+.pay-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(212, 176, 0, 0.4);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .payment-header {
+        padding: 15px;
+    }
+
+    .payment-header h2 {
+        font-size: 23px;
+    }
+
+    .secure-badge {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+
+    .payment-total-box {
+        padding: 20px;
+    }
+
+    .total-label {
+        font-size: 18px;
+    }
+
+    .payment-total-box strong {
+        font-size: 24px;
+    }
+
+    .payment-option {
+        padding: 18px 15px;
+    }
+
+    .payment-option-left {
+        gap: 12px;
+    }
+
+    .payment-option h3 {
+        font-size: 16px;
+    }
+
+    .payment-option p,
+    .payment-option span {
+        font-size: 13px;
+    }
+
+    .payment-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 21px;
+    }
+}
+
+.login-message {
+    position: fixed;
+    top: 25px;
+    right: -450px;
+    width: 360px;
+    padding: 18px 20px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+    z-index: 99999;
+    transition: right 0.4s ease;
+}
+
+.login-message.show {
+    right: 25px;
+}
+
+.message-icon {
+    font-size: 30px;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-content h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.message-content p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.login-message button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login-message.success {
+    border-left: 5px solid #28a745;
+}
+
+.login-message.success .message-icon {
+    color: #28a745;
+}
+
+.login-message.error {
+    border-left: 5px solid #dc3545;
+}
+
+.login-message.error .message-icon {
+    color: #dc3545;
+}
+
+.user-welcome {
+    display: inline-block;
+    margin: 8px 15px;
+    font-weight: 600;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.nav-logout {
+    display: none;
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #d9534f;
+    color: white !important;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.nav-logout:hover {
+    background-color: #c9302c;
+}
+
+/* ===============================
+   USERNAME - NAVBAR FIX
+================================ */
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.user-welcome {
+    display: inline-block;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    flex-shrink: 1;
+}
+
+/* Keep Logout button separate */
+.nav-logout {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* =========================================
+   NAVBAR - FINAL PROFESSIONAL SPACING
+========================================= */
+
+@media (min-width: 992px) {
+
+    /* Full navbar */
+    .custom-navbar .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Logo */
+    .custom-navbar .navbar-brand {
+        margin-right: 150px !important;
+        padding: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Navbar area */
+    .custom-navbar .navbar-collapse {
+        flex: 1 !important;
+        padding: 0 !important;
+    }
+
+    /* Menu items */
+    .custom-navbar .navbar-nav {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 30px !important;
+    }
+
+    /* Normal links */
+    .custom-navbar .navbar-nav .nav-link {
+        margin: 0 !important;
+        padding: 8px 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* Username */
+    .custom-navbar .user-welcome {
+        display: inline-block !important;
+        max-width: 120px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        margin: 0 !important;
+        flex-shrink: 1 !important;
+    }
+
+    /* Logout stays at far right */
+    .custom-navbar .nav-logout {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* ===============================
+   MY ORDERS
+================================ */
+
+.my-order-section {
+    background: #fffdf5;
+    padding: 60px 20px;
+}
+
+.my-order-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.my-order-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffc107;
+    border-radius: 50%;
+    font-size: 27px;
+}
+
+.my-order-title h2 {
+    margin: 0;
+    color: #222;
+    font-weight: 700;
+}
+
+.my-order-title p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+
+.my-order-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #ffc107;
+}
+
+
+.my-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+
+.my-order-header h3 {
+    margin: 0;
+    color: #222;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.my-order-header p {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: 13px;
+}
+
+
+.order-status {
+    background: #fff3cd;
+    color: #856404;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.my-order-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+
+.my-order-details div {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.my-order-details strong {
+    color: #777;
+    font-size: 12px;
+}
+
+
+.my-order-details span {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.empty-order {
+    text-align: center;
+    background: white;
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.empty-order-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+
+.empty-order h3 {
+    color: #222;
+    margin-bottom: 8px;
+}
+
+
+.empty-order p {
+    color: #777;
+}
+
+
+@media (max-width: 576px) {
+
+    .my-order-section {
+        padding: 40px 15px;
+    }
+
+    .my-order-title {
+        gap: 15px;
+    }
+
+    .my-order-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .my-order-header {
+        align-items: flex-start;
+    }
+
+    .my-order-header h3 {
+        font-size: 18px;
+    }
+
+    .my-order-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .my-order-details div {
+        min-width: auto;
+    }
+
+}
+
+/* =========================
+   FOOD SEARCH BAR
+========================= */
+
+.food-search-box {
+    position: relative;
+    width: 210px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.food-search-box input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e5c04b;
+    border-radius: 22px;
+    padding: 0 38px 0 16px;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    transition: 0.3s;
+}
+
+.food-search-box input:focus {
+    border-color: #d4a900;
+    box-shadow: 0 0 8px rgba(212, 169, 0, 0.25);
+}
+
+.food-search-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    line-height: 1;
+}
+
+.food-search-box button:hover {
+    color: #d4a900;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+
+    .food-search-box {
+        position: absolute;
+        top: 78px;
+        left: 15px;
+        right: 15px;
+        width: auto;
+        margin: 0;
+        z-index: 1000;
+    }
+
+    .food-search-box input {
+        height: 42px;
+        background: #fff;
+    }
+
+    .custom-navbar {
+        margin-bottom: 55px;
+    }
+}
+
+/* Footer Logo Center */
+.footer-section .food-munch-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* No Food Found */
+
+.no-food-found {
+    display: none;
+    text-align: center;
+    padding: 35px 20px;
+    margin: 20px auto;
+    max-width: 450px;
+    background: #fffdf5;
+    border: 1px solid #ead37a;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.no-food-icon {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.no-food-found h3 {
+    color: #333;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.no-food-found p {
+    color: #777;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Mobile Navbar Search */
+.mobile-navbar-search {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    .mobile-navbar-search {
+        display: block;
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    .mobile-navbar-search input {
+        width: 100%;
+        height: 42px;
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .mobile-navbar-search input:focus {
+        border-color: #d4af00;
+        box-shadow: 0 0 5px rgba(212, 175, 0, 0.2);
+    }
+
+    .custom-navbar .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .food-munch-logo {
+        max-width: 65px;
+        height: auto;
+    }
+
+    .custom-toggler {
+        flex-shrink: 0;
+    }
+}
+
+/* Mobile User Login State */
+
+.mobile-user-welcome {
+    display: none;
+    padding: 14px 20px;
+    font-weight: 700;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-logout {
+    display: none;
+    margin: 10px 20px 20px;
+    padding: 10px 18px;
+    text-align: center;
+    border-radius: 6px;
+    background: #d9534f;
+    color: white !important;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+/* Why Choose Us - Mobile Card Spacing */
+@media (max-width: 767px) {
+
+    #wcuSection .row {
+        row-gap: 20px;
+    }
+
+    #wcuSection .wcu-card {
+        margin-bottom: 0 !important;
+    }
+
+} 
